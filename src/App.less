@@ -1,0 +1,138 @@
+@import "~antd/dist/antd.dark.less";
+@import "~antd/dist/antd.compact.less";
+@import "https://use.typekit.net/vnw2lrk.css";
+
+@header-height: 15vh;
+@header-line-height: calc(@header-height + 1px);
+
+.App {
+  text-align: center;
+}
+
+.layout-background {
+  width: "100%";
+  height: "100%";
+  background: linear-gradient(263.66deg, #222222 67.71%, #023e8a 100%);
+}
+
+.logo {
+  float: left;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: @header-height;
+  line-height: @header-line-height;
+  // margin-top: 8vh;
+}
+
+.header-button {
+  font-family: "industry", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 29px;
+  padding: 10px 30px;
+
+  color: #ffffff;
+}
+
+.join-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 24px;
+  gap: 16px;
+  z-index: 1;
+  background: #ffbf1c;
+  border-radius: 8px;
+}
+
+.join-button .button-text {
+  width: 160px;
+  height: 29px;
+
+  font-family: "industry", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+
+#components-layout-demo-fixed .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.site-layout {
+  margin-top: @header-height;
+}
+
+.site-layout .site-layout-background {
+  // background: #fff;
+}
+
+.site-layout .site-layout-background .header-text {
+  font-family: "Industry";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 74px;
+  line-height: 96px;
+  color: #ffbf1c;
+}
+
+.site-layout .how-it-works .header-text {
+  display: flex;
+  justify-content: center;
+  font-family: "Industry";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #ffbf1c;
+}
+
+.text {
+  font-family: "Industry";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  position: relative;
+  z-index: 10;
+}
+
+.eth {
+  animation: spin 10s linear infinite;
+}
+.sol {
+  animation: spin 6s linear infinite;
+}
+.ava {
+  animation: spin 2s linear infinite;
+}
+.poly {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}
