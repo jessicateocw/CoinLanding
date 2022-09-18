@@ -80,10 +80,6 @@
   margin-top: @header-height;
 }
 
-.site-layout .site-layout-background {
-  // background: #fff;
-}
-
 .site-layout .site-layout-background .header-text {
   font-family: "Industry";
   font-style: normal;
@@ -91,6 +87,7 @@
   font-size: 74px;
   line-height: 96px;
   color: #ffbf1c;
+  z-index: 10;
 }
 
 .site-layout .how-it-works .header-text {
@@ -114,6 +111,9 @@
   z-index: 10;
 }
 
+.bit {
+  animation: spin 30s linear infinite;
+}
 .eth {
   animation: spin 10s linear infinite;
 }
@@ -127,6 +127,12 @@
   animation: spin 5s linear infinite;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -134,5 +140,38 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 1400px) {
+  .bit {
+    width: 50%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .eth {
+    width: 20%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .sol {
+    width: 25%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .ava {
+    width: 8%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .poly {
+    width: 10%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .star {
+    width: 2%;
+  }
+
+  .info {
+    width: 50%;
+  }
+
+  .define {
+    font-family: "Industry";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    position: relative;
+    z-index: 10;
+  }
 }

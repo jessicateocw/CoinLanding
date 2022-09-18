@@ -83,7 +83,14 @@ const App = () => {
       <div>
         <img
           src={Bit}
-          style={{ position: "absolute", top: "50vh", right: 0, zIndex: "0" }}
+          style={{
+            position: "absolute",
+            top: "50vh",
+            right: "-5vw",
+            zIndex: "1",
+          }}
+          className="bit"
+          alt="bit"
         />
         <img
           src={Eth}
@@ -94,6 +101,7 @@ const App = () => {
             zIndex: "0",
           }}
           className="eth"
+          alt="eth"
         />
         <img
           src={Poly}
@@ -104,6 +112,7 @@ const App = () => {
             zIndex: "0",
           }}
           className="poly"
+          alt="poly"
         />
         <img
           src={Ava}
@@ -114,6 +123,7 @@ const App = () => {
             zIndex: "0",
           }}
           className="ava"
+          alt="ava"
         />
         <img
           src={Sol}
@@ -124,42 +134,61 @@ const App = () => {
             zIndex: "0",
           }}
           className="sol"
+          alt="sol"
         />
         <img
           src={rocket}
-          style={{ position: "absolute", top: "30vh", zIndex: "0" }}
+          style={{ position: "absolute", top: "30vh", zIndex: "1" }}
+          className="rocket"
+          alt="rocket"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "70vh", left: "45vw" }}
+          className="star"
+          alt="star"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "120vh", left: "40vw" }}
+          className="star"
+          alt="star"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "100vh", left: "65vw" }}
+          className="star"
+          alt="star"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "135vh", right: "20vw" }}
+          className="star"
+          alt="star"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "130vh", right: "10vw" }}
+          className="star"
+          alt="star"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "30vh", right: "15vw" }}
+          className="star"
+          alt="star"
         />
         <img
           src={star}
           style={{ position: "absolute", top: "40vh", right: "5vw" }}
+          className="star"
+          alt="star"
         />
-         <img
+        <img
           src={star}
           style={{ position: "absolute", top: "30vh", left: "45vw" }}
+          className="star"
+          alt="star"
         />
       </div>
       <Content id="enter" className="site-layout" style={{ padding: "0 50px" }}>
@@ -195,12 +224,12 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <Typography className="text">
+            <Typography className="text define">
               Choose a token pool (e.g. Solana, Polygon), <br /> deposit tokens
               and submit price prediction for <br />
               that token
             </Typography>
-            <img src={row} />
+            <img src={row} className="info" alt="info" />
           </div>
           <div
             style={{
@@ -210,8 +239,8 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <img src={circle} />
-            <Typography className="text">
+            <img src={circle} className="info" alt="info" />
+            <Typography className="text define">
               Winners selected every day based on the <br />
               best predictions and awarded the yields <br />
               generated from the pools
@@ -226,12 +255,12 @@ const App = () => {
               justifyContent: "space-between",
             }}
           >
-            <Typography className="text">
+            <Typography className="text define">
               Even if you don't win, you get to still keep
               <br />
               all of your principle
             </Typography>
-            <img src={whirl} />
+            <img src={whirl} className="info" alt="info" />
           </div>
         </div>
         <div
