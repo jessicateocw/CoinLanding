@@ -40,7 +40,7 @@ const App = () => {
       <Header
         style={{
           position: "fixed",
-          zIndex: 1,
+          zIndex: 2,
           width: "100%",
           background: "transparent",
         }}
@@ -53,6 +53,8 @@ const App = () => {
           style={{
             display: "flex",
           }}
+
+          className="headerfields"
         >
           <Button type="text" className="header-button" onClick={gotohow}>
             <span className="button-text">How it works</span>
@@ -83,7 +85,8 @@ const App = () => {
       </Header>
       <div>
       <div>
-        <div style={{zIndex: 0}} className="graphics">
+        <div className="overlay"/>
+        <div className="graphics">
         <Row>
           <Col span={8} offset={11}>
             <Row>
@@ -143,7 +146,7 @@ const App = () => {
        
         <img
           src={rocket}
-          style={{top: "30vh" }}
+          style={{top: "30vh"}}
           className="rocket"
         />
        

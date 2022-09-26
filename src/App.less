@@ -26,6 +26,8 @@
 
   height: @header-height;
   line-height: @header-line-height;
+  position: relative;
+  z-index: 2;
   // margin-top: 8vh;
 }
 
@@ -50,6 +52,7 @@
   background: #ffbf1c;
   border-radius: 8px;
 }
+
 
 .join-button .button-text {
   width: 160px;
@@ -76,6 +79,8 @@
 }
 
 .graphics {
+  position: relative;
+  z-index: 0;
   width: 100%;
   height: 100%;
 }
@@ -103,6 +108,8 @@
   font-size: 48px;
   line-height: 58px;
   color: #ffbf1c;
+  position: relative;
+  z-index: 10;
 }
 
 .text {
@@ -121,6 +128,8 @@
   align-items: center;
   justify-content: space-between;
 
+  position: relative;
+  z-index: 2;
   .row{
     transform: scale(0.6);
   }
@@ -130,11 +139,24 @@
   }
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 500ms;
+  z-index: 1;
+}
+
 .middle {
   display: flex;
   padding-top: "30px";
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 
   img {
     transform: scale(0.8);
@@ -157,7 +179,7 @@
 .rocket{
   position: absolute;
   left: 0;
-  z-index: 3;
+  z-index: 4;
 }
 
 @keyframes spin {
@@ -186,6 +208,7 @@
   .site-layout .site-layout-background  .header-text {
     font-size: 2rem;
     line-height: 2.4rem;
+    
   }
 
   .site-layout .how-it-works .header-text {
@@ -210,6 +233,10 @@
     img {
       transform: scale(0.7);
     }
+  }
+
+  .headerfields{
+    visibility:hidden;
   }
 
  
