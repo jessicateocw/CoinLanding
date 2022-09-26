@@ -36,7 +36,6 @@
   font-size: 18px;
   line-height: 29px;
   padding: 10px 30px;
-
   color: #ffffff;
 }
 
@@ -76,6 +75,11 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+.graphics {
+  width: 100%;
+  height: 100%;
+}
+
 .site-layout {
   margin-top: @header-height;
 }
@@ -111,9 +115,32 @@
   z-index: 10;
 }
 
-.bit {
-  animation: spin 30s linear infinite;
+.explainations {
+  display: flex;
+  padding-top: "30px";
+  align-items: center;
+  justify-content: space-between;
+
+  .row{
+    transform: scale(0.6);
+  }
+
+  img {
+    transform: scale(0.8);
+  }
 }
+
+.middle {
+  display: flex;
+  padding-top: "30px";
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    transform: scale(0.8);
+  }
+}
+
 .eth {
   animation: spin 10s linear infinite;
 }
@@ -127,10 +154,10 @@
   animation: spin 5s linear infinite;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block; /* remove extra space below image */
+.rocket{
+  position: absolute;
+  left: 0;
+  z-index: 3;
 }
 
 @keyframes spin {
@@ -140,38 +167,50 @@ img {
   }
 }
 
-/* Use a media query to add a break point at 800px: */
-@media screen and (max-width: 1400px) {
-  .bit {
-    width: 50%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .eth {
-    width: 20%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .sol {
-    width: 25%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .ava {
-    width: 8%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .poly {
-    width: 10%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .star {
-    width: 2%;
+@media (max-width: 800px) {
+  .graphics {
+    position: absolute;
+    padding-top: 80vh;
   }
 
-  .info {
-    width: 50%;
+  .rocket{
+    transform-origin: left top;
+    transform: scale(0.45);
   }
 
-  .define {
-    font-family: "Industry";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 26px;
-    position: relative;
-    z-index: 10;
+  .planets{
+    transform-origin: left top;
+    transform: scale(0.45);
   }
+
+  .site-layout .site-layout-background  .header-text {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  .site-layout .how-it-works .header-text {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  .text {
+    font-size: 1.75rem;
+  }
+
+  .middle {
+    flex-direction: column-reverse;
+    img {
+      transform: scale(0.7);
+    }
+  }
+
+  .explainations{
+    flex-direction: column;
+
+    img {
+      transform: scale(0.7);
+    }
+  }
+
+ 
 }

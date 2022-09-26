@@ -1,6 +1,7 @@
 import { Button, Typography } from "antd";
 import "./App.less";
 import React from "react";
+import { Row, Col } from 'antd';
 import {
   logo,
   rocket,
@@ -81,122 +82,81 @@ const App = () => {
         </div>
       </Header>
       <div>
-        <img
-          src={Bit}
-          style={{
-            position: "absolute",
-            top: "50vh",
-            right: "-5vw",
-            zIndex: "1",
-          }}
-          className="bit"
-          alt="bit"
-        />
-        <img
-          src={Eth}
-          style={{
-            position: "absolute",
-            top: "30vh",
-            left: "50%",
-            zIndex: "0",
-          }}
-          className="eth"
-          alt="eth"
-        />
-        <img
-          src={Poly}
-          style={{
-            position: "absolute",
-            top: "110vh",
-            left: "55vw",
-            zIndex: "0",
-          }}
-          className="poly"
-          alt="poly"
-        />
-        <img
-          src={Ava}
-          style={{
-            position: "absolute",
-            top: "80vh",
-            left: "55vw",
-            zIndex: "0",
-          }}
-          className="ava"
-          alt="ava"
-        />
-        <img
-          src={Sol}
-          style={{
-            position: "absolute",
-            top: "70vh",
-            left: "27vw",
-            zIndex: "0",
-          }}
-          className="sol"
-          alt="sol"
-        />
+      <div>
+        <div style={{zIndex: 0}} className="graphics">
+        <Row>
+          <Col span={8} offset={11}>
+            <Row>
+            <img
+              src={Eth}
+              style={{
+                position: "absolute",
+                zIndex: "0",
+              }}
+              className="planets"
+            />
+            </Row>
+            <Row>
+            <img
+              src={Ava}
+              style={{
+                position: "absolute",
+                paddingTop: "50vh",
+                zIndex: "0",
+              }}
+              className="planets"
+            />
+            </Row>
+            <Row>
+            <img
+              src={Poly}
+              style={{
+                position: "absolute",
+                paddingTop: "70vh",
+                zIndex: "0",
+              }}
+              className="planets"
+            />
+            </Row>
+            </Col>
+        </Row>
+        <Row>
+          <Col span={6} offset={3}> 
+          <img
+            src={Sol}
+            style={{
+              position: "absolute",
+              paddingTop: "0vh",
+              zIndex: "0",
+            }}
+            className="planets"
+            />
+          </Col>
+          <Col span={6} offset={6}> 
+            <img
+              src={Bit}
+              style={{ position: "absolute", zIndex: "1", paddingTop: "150px"}}
+              className="planets"
+            />
+          </Col>
+        </Row>
+       
         <img
           src={rocket}
-          style={{ position: "absolute", top: "30vh", zIndex: "1" }}
+          style={{top: "30vh" }}
           className="rocket"
-          alt="rocket"
         />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "70vh", left: "45vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "120vh", left: "40vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "100vh", left: "65vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "135vh", right: "20vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "130vh", right: "10vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "30vh", right: "15vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "40vh", right: "5vw" }}
-          className="star"
-          alt="star"
-        />
-        <img
-          src={star}
-          style={{ position: "absolute", top: "30vh", left: "45vw" }}
-          className="star"
-          alt="star"
-        />
+       
+        </div>
+      </div> 
+        
       </div>
       <Content id="enter" className="site-layout" style={{ padding: "0 50px" }}>
         <div
           className="site-layout-background"
           style={{ padding: 24, minHeight: "120vh" }}
         >
-          <div className="header-text">
+          <div className="header-text" style={{position: "relative", zIndex: "10" }}>
             Enter the wars
             <br />
             of price predictions
@@ -217,27 +177,17 @@ const App = () => {
         >
           <div className="header-text">How it works</div>
           <div
-            style={{
-              display: "flex",
-              paddingTop: "30px",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
+            className="explainations"
           >
             <Typography className="text define">
               Choose a token pool (e.g. Solana, Polygon), <br /> deposit tokens
               and submit price prediction for <br />
               that token
             </Typography>
-            <img src={row} className="info" alt="info" />
+            <img src={row} className="row"/>
           </div>
           <div
-            style={{
-              display: "flex",
-              paddingTop: "30px",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
+            className="middle"
           >
             <img src={circle} className="info" alt="info" />
             <Typography className="text define">
@@ -248,12 +198,7 @@ const App = () => {
           </div>
 
           <div
-            style={{
-              display: "flex",
-              paddingTop: "30px",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
+           className="explainations"
           >
             <Typography className="text define">
               Even if you don't win, you get to still keep
